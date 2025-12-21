@@ -86,7 +86,7 @@ int main()
     {
         cout << val << " ";
     }
-    cout<<endl;
+    cout << endl;
     for (int val : result2)
     {
         cout << val << " ";

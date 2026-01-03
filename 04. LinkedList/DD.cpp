@@ -123,13 +123,32 @@ Node *removeKthElement(Node *head, int k)
     return head;
 }
 
+void deleteNode(Node *temp)
+{
+    Node *prev = temp->back;
+    Node *front = temp->next;
+
+    if (front == NULL)
+    {
+        prev->next = nullptr;
+        temp->back = nullptr;
+        free(temp);
+        return;
+    }
+    prev->next = front;
+    front->back = prev;
+    temp->next = temp->back = nullptr;
+    free(temp);
+}
+
 int main()
 {
     vector<int> arr{12, 4, 5, 6};
     Node *head = convertArrToLL(arr);
     // head=deleteHead(head);
     // head = deleteTail(head);
-     head = removeKthElement(head,5);
+    // head = removeKthElement(head, 5);
+    deleteNode(head->next->next);
     print(head);
 
     return 0;

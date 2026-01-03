@@ -23,7 +23,7 @@ public:
     }
 };
 
-;
+
 
 Node *convertArr2LL(vector<int> &arr)
 {
@@ -104,8 +104,8 @@ int main()
     Node *head = convertArr2LL(arr);
     // cout << head->data;
     // cout << lengthOfLL(head);
-    // cout << checkPresent(head, 5);
+    cout << checkPresent(head, 8);
     // head = removeHead(head);
     head = removeTail(head);
-    print(head);
+    // print(head);
 }

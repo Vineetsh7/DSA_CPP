@@ -191,11 +191,12 @@ Node *insertBeforeKthElement(Node *head, int k, int val)
     return head;
 }
 
-void inseretBeforeNode(Node*node, int val){
-    Node*prev=node->back;
-    Node*newNode=new Node(val, node, prev);
-    prev->next=newNode;
-    node->back=newNode;
+void inseretBeforeNode(Node *node, int val)
+{
+    Node *prev = node->back;
+    Node *newNode = new Node(val, node, prev);
+    prev->next = newNode;
+    node->back = newNode;
 }
 
 int main()
